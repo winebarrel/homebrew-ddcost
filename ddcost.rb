@@ -5,21 +5,21 @@
 class Ddcost < Formula
   desc "A tool that shows a breakdown of Datadog costs in a table."
   homepage "https://github.com/winebarrel/ddcost"
-  version "1.1.3"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/ddcost/releases/download/v1.1.3/ddcost_1.1.3_darwin_amd64.tar.gz"
-      sha256 "8036fda665f527ea164dcef145ddbf7b6fc5e6fee5d3109785fb8ee03b9dd8cb"
+      url "https://github.com/winebarrel/ddcost/releases/download/v1.2.0/ddcost_1.2.0_darwin_amd64.tar.gz"
+      sha256 "18b704825b0e6ee81180e0bca4e60ae612bee673d6941c98df86e44d7a35ba2b"
 
       def install
         bin.install 'ddcost'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/ddcost/releases/download/v1.1.3/ddcost_1.1.3_darwin_arm64.tar.gz"
-      sha256 "46f3e008c3a3e242ca154251a0898c9114e5142bee87db9ec2bf3a991bdc777b"
+      url "https://github.com/winebarrel/ddcost/releases/download/v1.2.0/ddcost_1.2.0_darwin_arm64.tar.gz"
+      sha256 "f95111860e0229c5741245b51734a604f4b35330238620de5cd6163b3ff3ccb4"
 
       def install
         bin.install 'ddcost'
@@ -28,17 +28,17 @@ class Ddcost < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/ddcost/releases/download/v1.1.3/ddcost_1.1.3_linux_amd64.tar.gz"
-      sha256 "a12c7c993d9bbb461bc39dcc70cbe66d5386e2ae09a9a370023f585c0312b172"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/ddcost/releases/download/v1.2.0/ddcost_1.2.0_linux_arm64.tar.gz"
+      sha256 "69f632ffcbab6870b1e4a26b27739b0104b5eaa8b5d0d6479e72d7d97520c465"
 
       def install
         bin.install 'ddcost'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/ddcost/releases/download/v1.1.3/ddcost_1.1.3_linux_arm64.tar.gz"
-      sha256 "e002d9b13f0402a8e9930a621cebfaa8fe8e53acf2f9fb4411f8f5e92808f95a"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/ddcost/releases/download/v1.2.0/ddcost_1.2.0_linux_amd64.tar.gz"
+      sha256 "3d05d2a6d977472a3ab8f700d52991f7b1d1920ab78854411135a81414a5412c"
 
       def install
         bin.install 'ddcost'
