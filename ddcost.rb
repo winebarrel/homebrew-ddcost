@@ -5,21 +5,21 @@
 class Ddcost < Formula
   desc "A tool that shows a breakdown of Datadog costs in a table."
   homepage "https://github.com/winebarrel/ddcost"
-  version "1.2.0"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/ddcost/releases/download/v1.2.0/ddcost_1.2.0_darwin_amd64.tar.gz"
-      sha256 "18b704825b0e6ee81180e0bca4e60ae612bee673d6941c98df86e44d7a35ba2b"
+      url "https://github.com/winebarrel/ddcost/releases/download/v1.3.0/ddcost_1.3.0_darwin_amd64.tar.gz"
+      sha256 "89bdb3a362d57d33c51f42001615ba157ab04e8a0d493a778a69211ee27c8cd9"
 
       def install
         bin.install 'ddcost'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/ddcost/releases/download/v1.2.0/ddcost_1.2.0_darwin_arm64.tar.gz"
-      sha256 "f95111860e0229c5741245b51734a604f4b35330238620de5cd6163b3ff3ccb4"
+      url "https://github.com/winebarrel/ddcost/releases/download/v1.3.0/ddcost_1.3.0_darwin_arm64.tar.gz"
+      sha256 "6fe393ac2cf827dfe30433cd5cac19a0635ebfc6b4d1cfc6fdc9c6021323c4bf"
 
       def install
         bin.install 'ddcost'
@@ -29,16 +29,16 @@ class Ddcost < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/ddcost/releases/download/v1.2.0/ddcost_1.2.0_linux_arm64.tar.gz"
-      sha256 "69f632ffcbab6870b1e4a26b27739b0104b5eaa8b5d0d6479e72d7d97520c465"
+      url "https://github.com/winebarrel/ddcost/releases/download/v1.3.0/ddcost_1.3.0_linux_arm64.tar.gz"
+      sha256 "2defa69b5d7c9d97edc7de85e4e1eb90a7c67406bde7fbb7249d12488c65fbb2"
 
       def install
         bin.install 'ddcost'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/ddcost/releases/download/v1.2.0/ddcost_1.2.0_linux_amd64.tar.gz"
-      sha256 "3d05d2a6d977472a3ab8f700d52991f7b1d1920ab78854411135a81414a5412c"
+      url "https://github.com/winebarrel/ddcost/releases/download/v1.3.0/ddcost_1.3.0_linux_amd64.tar.gz"
+      sha256 "526ea2b452f2350adce0605c07aeb7eddc1ebe25780dd42726acd8fd0fd69725"
 
       def install
         bin.install 'ddcost'
